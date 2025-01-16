@@ -5,6 +5,11 @@ import queue
 import openai
 import os
 
+IFTTT_WEBHOOK_KEY = os.getenv("IFTTT_WEBHOOK_KEY")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+GOOGLE_APPLICATION_CREDENTIALS = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
+
+
 # Initialize Google Speech Client
 print("Initializing Google Speech Client...")
 speech_client = speech.SpeechClient()
@@ -21,7 +26,7 @@ def audio_callback(in_data, frame_count, time_info, status):
 def trigger_ifttt(event_name, color):
     try:
         print(f"Sending IFTTT trigger: Event = {event_name}, Color = {color}")
-        url = f"https://maker.ifttt.com/trigger/triggerLED/json/with/key/hN97GZI_7YjGQFaInQcGPC-W3SpzNVqIEdImM_pGkMJ"
+        url = f"https://maker.ifttt.com/trigger/triggerLED/json/with/key/{IFTTT_WEBHOOK_KEY}"
         payload = {"value1": color}
         response = requests.post(url, json=payload)
         print(f"IFTTT Response: {response.status_code} - {response.text}")
