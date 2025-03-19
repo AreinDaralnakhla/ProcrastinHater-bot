@@ -5,9 +5,9 @@ import queue
 import openai
 import os
 
-IFTTT_WEBHOOK_KEY = os.getenv("IFTTT_WEBHOOK_KEY")
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-GOOGLE_APPLICATION_CREDENTIALS = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
+IFTTT_WEBHOOK_KEY = ""
+OPENAI_API_KEY = ""
+GOOGLE_APPLICATION_CREDENTIALS = ""
 
 
 # Initialize Google Speech Client
