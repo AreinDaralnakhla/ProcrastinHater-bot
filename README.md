@@ -8,4 +8,4 @@ Setup:
 To build the bot, you’ll need a General GPIO, LED Meshes, and an IFTTT account.
 If you only need the functionality, clone this repo, install the required packages, add your Google Speech-to-Text and OpenAI API keys, and run audio_checker.py.
 
-![components](components.JPEG)
+![components](./components.JPEG)
